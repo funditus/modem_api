@@ -1,0 +1,12 @@
+#!/bin/bash
+# data file
+INPUT=/root/input.txt
+ 
+# while loop
+while IFS= read -r -n1 char
+do
+        # display one character at a time
+#        [ "$char" == ' ' ] && printf 0020
+        printf "%04X" \'"$char"
+#	echo  "$char"
+done < "$INPUT"
